@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Registros de {{ nombre }}</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <h1>Registros de la tabla {{ nombre }}</h1>
+  <table border="1">
+    <tr>
+      {% for c in columnas %}
+        <th>{{ c }}</th>
+      {% endfor %}
+    </tr>
+    {% for fila in registros %}
+      <tr>
+        {% for celda in fila %}
+          <td>{{ celda }}</td>
+        {% endfor %}
+      </tr>
+    {% endfor %}
+  </table>
+</body>
+</html>

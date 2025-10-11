@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Conexión a MySQL</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <h1>Conectar a MySQL</h1>
+  <form method="POST">
+    Host: <input type="text" name="host" value="localhost"><br>
+    Usuario: <input type="text" name="usuario"><br>
+    Clave: <input type="password" name="clave"><br>
+    Base de datos: <input type="text" name="basedatos"><br>
+    <button type="submit">Conectar</button>
+  </form>
+</body>
+</html>

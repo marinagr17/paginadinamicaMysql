@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Tablas disponibles</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <h1>Tablas en la base de datos</h1>
+  <ul>
+    {% for t in tablas %}
+      <li><a href="{{ url_for('mostrar_registros', nombre=t) }}">{{ t }}</a></li>
+    {% endfor %}
+  </ul>
+</body>
+</html>
